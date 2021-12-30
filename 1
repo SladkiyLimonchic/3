@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+ <Button
+        android:id="@+id/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressblack"
+        android:text="1"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+ <Button
+        android:id="@+id/grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressgrey"
+        android:text="2"
+        android:background="@color/grey"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+ <Button
+        android:id="@+id/brown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressbrown"
+        android:text="3"
+        android:background="@color/brown"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+ <Button
+        android:id="@+id/purpule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="presspurpule"
+        android:text="4"
+        android:background="@color/purple"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressblue"
+        android:text="5"
+        android:background="@color/blue"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressgreen"
+        android:text="6"
+        android:background="@color/green"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressyellow"
+        android:text="7"
+        android:background="@color/yellow"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <Button
+        android:id="@+id/orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressorange"
+        android:text="8"
+        android:background="@color/orange"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pressred"
+        android:text="9"
+        android:background="@color/red"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="300dp" />
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+public class MainActivity extends AppCompatActivity {
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button black = (Button) findViewById(R.id.black);
+        Button grey = (Button) findViewById(R.id.grey);
+        Button brown = (Button) findViewById(R.id.brown);
+        Button purpule = (Button) findViewById(R.id.purpule);
+        Button blue= (Button) findViewById(R.id.blue);
+        Button green = (Button) findViewById(R.id.green);
+        Button yellow = (Button) findViewById(R.id.yellow);
+        Button orange = (Button) findViewById(R.id.orange);
+        Button red = (Button) findViewById(R.id.red);
+
+        black.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.black));
+            }
+        });
+
+        grey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.grey));
+            }
+        });
+
+        brown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.brown));
+            }
+        });
+
+        purpule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.purple));
+            }
+        });
+
+        blue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.blue));
+            }
+        });
+
+        green.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.green));
+            }
+        });
+
+        yellow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.yellow));
+            }
+        });
+
+        orange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.orange));
+            }
+        });
+
+        red.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackgroundColor(getColor(R.color.red));
+            }
+        });
+    }
+}
